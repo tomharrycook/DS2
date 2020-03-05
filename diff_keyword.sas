@@ -1,0 +1,21 @@
+proc ds2;
+data data (overwrite=YES);
+   dcl double total;
+   method run();
+      set ds2_sas.banks;
+      Total=sum(Rate,.05)*50000;
+   end;
+enddata;
+run;
+quit;
+
+proc ds2;
+data "data" (overwrite=YES);
+   dcl double total;
+   method run();
+      set ds2_sas.banks;
+      Total=sum(Rate,.05)*50000;
+   end;
+enddata;
+run;
+quit;

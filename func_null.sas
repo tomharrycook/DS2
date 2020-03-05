@@ -1,0 +1,11 @@
+proc ds2;
+data _null_;
+   method init();
+      dcl bigint x;
+      dcl varchar test;
+      test=if NULL(x) then 'True' else 'False'; 
+      put test=; 
+   end;
+enddata;
+run;
+quit;

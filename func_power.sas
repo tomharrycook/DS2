@@ -1,0 +1,12 @@
+proc ds2;
+data _null_;
+   method init();
+      dcl int x y z;
+      x=3;
+      y=2;
+      z=power(x,y);
+      put x= y= z=;
+   end;
+enddata;
+run;
+quit;

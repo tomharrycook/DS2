@@ -1,0 +1,23 @@
+proc ds2;
+data "data" (overwrite=YES);
+   dcl double total;
+   method run();
+      set ds2_sas.banks;
+      Total=sum(Rate,.05)*50000;
+      put Name @30 Rate percent5.1;
+   end;
+enddata;
+run;
+quit;
+
+proc ds2;
+data "data" (overwrite=YES);
+   dcl double total;
+   method run();
+      set ds2_sas.banks;
+      Total=sum(Rate,.05)*50000;
+      put Name $28. Rate percent5.1;
+   end;
+enddata;
+run;
+quit;

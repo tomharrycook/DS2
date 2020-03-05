@@ -1,0 +1,12 @@
+proc ds2;
+data _null_;
+   dcl double SAS_Date /*having format yymmdd10.*/;
+   dcl date DS2_Date;
+   method run();
+      set ds2_sas.sas_datetimes;
+      DS2_Date=to_date(SAS_Date); 
+      put SAS_Date= DS2_Date=; 
+   end;
+enddata;
+run;
+quit;

@@ -1,0 +1,11 @@
+proc ds2;
+data _null_;
+   method init();
+      dcl date y z;
+      y= date '2013-01-15';
+      z=intdt(y,-21);
+      put y= z=;
+   end;
+enddata;
+run;
+quit;

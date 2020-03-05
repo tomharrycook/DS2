@@ -1,0 +1,10 @@
+proc ds2;
+data _null_;
+   method init();
+      dcl varchar(16) str;
+      str = 'Hello World!';
+      put str;
+   end;
+enddata;
+run;
+quit;

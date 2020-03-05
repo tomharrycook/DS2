@@ -1,0 +1,11 @@
+proc ds2;
+data _null_;
+   method init();
+      dcl timestamp y z;
+      y=timestamp '2011-03-01 16:51:30.00';
+      z=intts(y,30);
+      put y= z=;
+   end;
+enddata;
+run;
+quit;
